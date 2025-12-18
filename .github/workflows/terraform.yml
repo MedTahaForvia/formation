@@ -41,3 +41,9 @@ jobs:
           RENDER_API_KEY: ${{ secrets.API_KEY }}
           RENDER_OWNER_ID: ${{ secrets.ID }}
         run: terraform apply -auto-approve
+
+      - name: Terraform Destroy
+        env:
+          RENDER_API_KEY: ${{ secrets.API_KEY }}
+          RENDER_OWNER_ID: ${{ secrets.ID }}
+        run: terraform destroy
